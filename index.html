@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays:</h1>
+    <p>You can view the result. Rightclick on the page, click inspect,then click on console to see the result.</p>
+    <script>
+// let num1 ="Ali";
+// let num2 = "Ahmed";
+// let num3 ="Hamza";
+// ......
+// let num100 = "Zeeshan";
+let names = [ "Ali","Ahmed","Hamza","Zeeshan"];
+console.log(names);
+console.log(names[2]);
+console.log(names.length);
+// Add into last
+names.push("Ahsan");
+names.push("Saad");
+console.log(names);
+// Add into start
+names.unshift("Hassan");
+console.log(names);
+//Remove from last
+names.pop();
+console.log(names);
+// Remove from start 
+names.shift();
+console.log(names);
+console.log(names.indexOf("Zeeshan"));
+let myGreet = ()=>
+{
+    console.log("I am arrow function")
+}
+myGreet();
+function func1(age,func2)
+{
+    console.log("I am function 1");
+    if(age>18)
+{
+    func2();
+}
+}
+func1(25,()=>
+{
+    console.log("I am arrow function,......");
+});
+function parent(child)
+{
+    console.log("parent")
+    child()
+}
+parent(()=>
+{
+    console.log("child")
+});
+let ages = [21,23,20,15,10,8,43,52]
+let updatedAges = ages.filter((abcd)=>
+{
+    if (abcd>18)
+{
+    return  abcd;
+}
+});
+console.log(updatedAges);
+ages.map((ab)=>
+{
+    console.log(ab*2);
+});
+let myfriendsname=["Ali","Hamza Ali","Zeeshan","Saad"];
+myfriendsname.map((ka)=>
+{
+    if(ka.includes("Ali"))
+{
+    console.log(ka);
+}
+});
+let myName = "Syeda Khadija"
+console.log(myName.includes("a"));
+    </script>
+</body>
+</html>
